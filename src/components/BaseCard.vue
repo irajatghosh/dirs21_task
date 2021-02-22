@@ -2,28 +2,28 @@
   <v-card class="mt-5 " max-width="344" hover>
     <v-list-item three-line>
       <v-list-item-content>
-        <v-slot name="menuName"></v-slot>
+        <slot name="menuName"></slot>
         <v-divider></v-divider>
         <v-list-item-title class=" mt-2">
           Description
         </v-list-item-title>
         <v-list-item-subtitle>
-          <v-slot name="menuDescription"></v-slot>
+          <slot name="menuDescription"></slot>
         </v-list-item-subtitle>
         <v-list-item-subtitle>
-          <v-slot name="availableTimeandPrice"></v-slot>
+          <slot name="availableTimeandPrice"></slot>
         </v-list-item-subtitle>
         <v-list-item-subtitle>
-          <v-slot name="preparationTime"></v-slot>
+          <slot name="preparationTime"></slot>
         </v-list-item-subtitle>
         <v-list-item-subtitle>
-          <v-slot name="count"></v-slot>
+          <slot name="count"></slot>
         </v-list-item-subtitle>
       </v-list-item-content>
     </v-list-item>
 
     <v-card-actions class="justify-end">
-      <v-slot name="actionBtn"></v-slot>
+      <slot name="actionBtn"></slot>
     </v-card-actions>
   </v-card>
 </template>

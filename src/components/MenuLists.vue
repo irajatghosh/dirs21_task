@@ -5,12 +5,30 @@
     <div class="text-center">
       <h1>Menu Lists</h1>
     </div>
-
-    <MenuGrid
-      :items="menuItems"
-      @delete-menu="deleteMenu"
-      @update-menu="updateMenu"
-    />
+    <v-row>
+      <v-col
+        cols="12"
+        md="4"
+        lg="4"
+        sm="3"
+        xs="2"
+        v-for="menuItem in menuItems"
+        :key="menuItem._id"
+      >
+        <MenuGrid
+          :id="menuItem._id"
+          :menuName="menuItem.name"
+          :menuDescription="menuItem.description"
+          :menuCategory="menuItem.category"
+          :menuAvailableTime="menuItem.availableTime"
+          :menuPrice="menuItem.price"
+          :menuPreparationTime="menuItem.preparationTime"
+          :menuCount="menuItem.count"
+          @delete-menu="deleteMenu"
+          @update-menu="updateMenu"
+        />
+      </v-col>
+    </v-row>
   </v-container>
 </template>
 

@@ -96,19 +96,28 @@
 
 <script>
 export default {
-  props: ["selectedMenuItem"],
+  props: [
+    "dishId",
+    "dishName",
+    "dishDescription",
+    "dishCategory",
+    "dishPrice",
+    "dishAvailability",
+    "dishCount",
+    "dishPrepareTime",
+  ],
   emits: ["update-menu"],
   data() {
     return {
       dialog: false,
-      menuId: this.selectedMenuItem._id,
-      menuName: this.selectedMenuItem.name,
-      menuDescription: this.selectedMenuItem.description,
-      menuCategory: this.selectedMenuItem.category,
-      menuAvailableTime: this.selectedMenuItem.availableTime,
-      menuPrice: this.selectedMenuItem.price,
-      menuPreparationTime: this.selectedMenuItem.preparationTime,
-      menuCount: this.selectedMenuItem.count,
+      menuId: this.dishId,
+      menuName: this.dishName,
+      menuDescription: this.dishDescription,
+      menuCategory: this.dishCategory,
+      menuAvailableTime: this.dishAvailability,
+      menuPrice: this.dishPrice,
+      menuPreparationTime: this.dishPrepareTime,
+      menuCount: this.dishCount,
     };
   },
   methods: {
